@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://HealthBar/barHorizontal_green_mid 200.png" type="Texture" id=1]
+[ext_resource path="res://HealthBar/HealthBar2D.gd" type="Script" id=2]
+
+[node name="HealthBar2D" type="TextureProgress"]
+margin_right = 40.0
+margin_bottom = 40.0
+max_value = 10.0
+value = 10.0
+texture_progress = ExtResource( 1 )
+script = ExtResource( 2 )
+[connection signal="gui_input" from="." to="." method="_on_HealthBar2D_gui_input"]
