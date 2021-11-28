@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://nengach.jpg" type="Texture" id=1]
 [ext_resource path="res://Game/Game.gd" type="Script" id=2]
@@ -48,6 +48,8 @@ tonemap_white = 4.0
 dof_blur_far_distance = 127.26
 dof_blur_far_amount = 0.06
 
+[sub_resource type="BoxShape" id=6]
+
 [node name="Main" type="Spatial"]
 script = ExtResource( 2 )
 
@@ -88,6 +90,8 @@ transform = Transform( 0.00929482, 0, 0, 0, 0.00929482, 0, 0, 0, 0.00929482, 0, 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.71845, 1.69824, -6.01976 )
 
 [node name="CSGCombiner" type="CSGCombiner" parent="."]
+transform = Transform( 0.975786, 0, 0, 0, 0.975786, 0, 0, 0, 0.975786, 0, 0, 0 )
+use_collision = true
 
 [node name="CSGBox" type="CSGBox" parent="CSGCombiner"]
 transform = Transform( 0.3, 0, 0, 0, 1, 0, 0, 0, 0.3, -9.7, 1.5, -0.7 )
@@ -100,3 +104,10 @@ transform = Transform( 0.3, 0, 0, 0, 1, 0, 0, 0, 0.3, -9.7, 1.5, 1.9 )
 
 [node name="CSGBox4" type="CSGBox" parent="CSGCombiner"]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1.60406, -9.7, 2.8, 0.6 )
+
+[node name="Area" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.324534, 0.441548, 0.378397 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50091, 1.13705, 0 )
+shape = SubResource( 6 )
