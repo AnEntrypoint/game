@@ -105,9 +105,8 @@ transform = Transform( 0.3, 0, 0, 0, 1, 0, 0, 0, 0.3, -9.7, 1.5, 1.9 )
 [node name="CSGBox4" type="CSGBox" parent="CSGCombiner"]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1.60406, -9.7, 2.8, 0.6 )
 
-[node name="Area" type="Area" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.324534, 0.441548, 0.378397 )
+[node name="StaticBody" type="StaticBody" parent="."]
 
-[node name="CollisionShape" type="CollisionShape" parent="Area"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50091, 1.13705, 0 )
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.176376, 1.5786, 0.378397 )
 shape = SubResource( 6 )
