@@ -11,6 +11,7 @@ var is_me := true
 var network_id := -1
 var vertical_velocity := 0.0
 var sneaking := false setget set_sneaking
+var max_health:= 100.0
 var health := 100.0
 
 const GRAVITY := 0.2
@@ -76,6 +77,7 @@ func _input(event):
 		var hit_object : Node = weapon_ray_cast.get_collider()
 		if hit_object and hit_object.has_method("damage"):
 			hit_object.rpc_unreliable("damage", 10.0)
+			$HealthBar3D.update(health, max_health)
 
 
 func _on_connected_to_server():
