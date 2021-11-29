@@ -6,9 +6,11 @@
 [node name="HealthBar2D" type="TextureProgress"]
 margin_right = 40.0
 margin_bottom = 40.0
-max_value = 10.0
-value = 10.0
+value = 50.0
 texture_progress = ExtResource( 1 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="gui_input" from="." to="." method="_on_HealthBar2D_gui_input"]
