@@ -6,7 +6,7 @@
 [node name="HealthBar2D" type="TextureProgress"]
 margin_right = 40.0
 margin_bottom = 40.0
-value = 50.0
+value = 100.0
 texture_progress = ExtResource( 1 )
 script = ExtResource( 2 )
 __meta__ = {
