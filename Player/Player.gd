@@ -77,7 +77,6 @@ func _input(event):
 		rpc_unreliable("play_sound", "Shoot")
 		var hit_object : Node = weapon_ray_cast.get_collider()
 		if hit_object and hit_object.has_method("damage"):
-			$HealthBar3D.update(health, max_health)
 			hit_object.rpc_unreliable("damage", 10.0)
 
 
@@ -111,6 +110,7 @@ func replicate(property : String) -> void:
 remotesync func damage(amount : float) -> void:
 	health -= amount
 	if health <= .0:
+		$HealthBar3D.update(health, max_health)
 		queue_free()
 
 
