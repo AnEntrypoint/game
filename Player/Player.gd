@@ -6,6 +6,7 @@ onready var animation_player := $AnimationPlayer
 onready var walk_player := $WalkPlayer
 onready var shoot_player := $ShootPlayer
 onready var crosshair := $Crosshair
+onready var heath_bar := $HealthBar3D
 
 var is_me := true
 var network_id := -1
@@ -76,8 +77,8 @@ func _input(event):
 		rpc_unreliable("play_sound", "Shoot")
 		var hit_object : Node = weapon_ray_cast.get_collider()
 		if hit_object and hit_object.has_method("damage"):
-			hit_object.rpc_unreliable("damage", 10.0)
 			$HealthBar3D.update(health, max_health)
+			hit_object.rpc_unreliable("damage", 10.0)
 
 
 func _on_connected_to_server():
