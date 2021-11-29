@@ -10,4 +10,5 @@ max_value = 10.0
 value = 10.0
 texture_progress = ExtResource( 1 )
 script = ExtResource( 2 )
+
 [connection signal="gui_input" from="." to="." method="_on_HealthBar2D_gui_input"]
