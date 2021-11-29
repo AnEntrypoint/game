@@ -13,4 +13,4 @@ func update_bar(amount, full):
 		texture_progress = bar_yellow
 	if amount < 0.45 * full:
 		texture_progress = bar_red
-	value = amount
+	value = (full-amount)*100
