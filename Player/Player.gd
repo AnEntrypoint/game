@@ -109,8 +109,8 @@ func replicate(property : String) -> void:
 
 remotesync func damage(amount : float) -> void:
 	health -= amount
+	$HealthBar3D.update(health, max_health)
 	if health <= .0:
-		$HealthBar3D.update(health, max_health)
 		queue_free()
 
 
